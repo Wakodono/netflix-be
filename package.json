@@ -20,10 +20,14 @@
   },
   "homepage": "https://github.com/Wakodono/netflix-be#readme",
   "dependencies": {
+    "cloudinary": "^1.27.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-list-endpoints": "^6.0.0",
+    "fs-extra": "^10.0.0",
+    "multer": "^1.4.3",
+    "multer-storage-cloudinary": "^4.0.0",
     "uniqid": "^5.4.0"
   },
   "devDependencies": {
