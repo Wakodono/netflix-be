@@ -3,7 +3,7 @@ import uniqid from "uniqid"
 
 import { getMedia, writeMedia } from "../../lib/fs-tools"
 
-mediaRouter = express.Router()
+const mediaRouter = express.Router()
 
 mediaRouter.post("/", async (req, res, next) => {
     try {
@@ -98,3 +98,5 @@ mediaRouter.delete("/:mediaId", async (req, res, next) => {
         next(error)
     }
 })
+
+export default mediaRouter
