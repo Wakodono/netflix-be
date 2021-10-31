@@ -6,6 +6,10 @@ import listEndpoints from "express-list-endpoints";
 
 import { join } from "path"
 
+import mediaRouter from "./services/media/index"
+
+import { genericErrorHandler, badRequestHandler, unauthorizedHandler, notFoundHandler } from "./services/errorHandlers.js"
+
 
 const server = express()
 
