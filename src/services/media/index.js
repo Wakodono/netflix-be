@@ -1,7 +1,7 @@
 import express from "express"
 import uniqid from "uniqid"
 
-import { getMedia, writeMedia } from "../../lib/fs-tools"
+import { getMedia, writeMedia } from "../../lib/fs-tools.js"
 
 const mediaRouter = express.Router()
 
@@ -48,7 +48,7 @@ mediaRouter.get("/", async (req, res, next) => {
 mediaRouter.get("/:mediaId", async (req, res, next) => {
     try {
         const media = await getMedia()
-        const media = media.find(m => m.id === req.params.mediaId)
+        media = media.find(m => m.id === req.params.mediaId)
         if (media) {
             res.send(media)
         } else {
